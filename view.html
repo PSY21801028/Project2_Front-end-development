@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="my.css">
+    <title>개인정보 보기 </title>
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100">
+<div class="container">
+    <h2 class="text-center">개인정보 보기</h2>
+
+    <form action="/submit" method="post">
+        <!-- 이름 입력 -->
+        <label for="fname">Student Number:</label><br>
+        <input type="text" id="snum" name="snum" value="22000000" readonly><br>
+        <label for="fname">Major:</label><br>
+        <input type="text" id="major" name="major" value="전산전자공학부" readonly><br>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="길동" readonly><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="박" readonly><br><br>
+        <!-- Contact -->
+        <form>
+            <label for="fname">Handong RC</label><br>
+            <label>
+                <input type="radio" checked="true" name="RC" value="열송" readonly>
+                열송
+            </label>
+
+            <!-- Other radio inputs with readonly attribute -->
+
+        </form> <br>
+
+        <label for="lname">E-mail</label><br>
+        <div class="w-50 input-group mb-3">
+            <input type="text" class="form-control" value="parksy3978" aria-label="Username" readonly>
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" value="@handong.ac.kr" aria-label="Server" readonly>
+        </div><br>
+        <label for="lname">Contact(Phone):</label><br>
+        <input type="text" id="contact" name="contact" value="010-1234-1234" readonly><br><br>
+
+        <!-- 생년월일 입력 -->
+        <label for="dob">생년월일:</label>
+        <input type="date" id="dob" name="dob" value="1996-01-11"required readonly><br><br>
+
+        <label for="dob">거주형태</label>
+        <select id="residential" name="rs" readonly>
+            <option value="inside">외부거주</option>
+            <option value="outside">기숙사</option>
+        </select><br><br>
+
+        <textarea rows="5" cols="70" readonly>
+            취급 주의 : 학부 임원 + 근로 + 졸업 직전 학기
+        </textarea><br>
+
+        <!-- 제출 버튼 -->
+        <button class="btn btn-primary" onclick="redirectTolist()">돌아가기</button>
+
+        <script>
+            function redirectTolist() {
+                // index.html로 페이지 이동
+                window.location.href = 'index.html';
+            }
+        </script>
+    </form>
+
+</body>
+</html>

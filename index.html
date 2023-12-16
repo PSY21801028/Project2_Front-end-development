@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀원 관리(index)</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>공동체리더쉽훈련 팀원 관리</h2>
+    <hr>
+
+    <!-- 게시물 목록 -->
+    <ul id="post-list" class="list-group">
+        <table class="table table-hover table-striped " style="border:1px solid;">
+            <thead>
+            <tr>
+                <th>학번</th>
+                <th>이름</th>
+                <th>전공</th>
+                <th>생년월일</th>
+                <th>성별</th>
+                <th>전화번호</th>
+                <th>Edit</th>
+                <th>Delete</th> <!-- 삭제 버튼 열 추가 -->
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>21400001</td>
+                <td>홍길동</td>
+                <td>전산전자공학부</td>
+                <td>1995-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>21500000</td>
+                <td>박길동</td>
+                <td>전산전자공학부</td>
+                <td>1996-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>21600000</td>
+                <td>이길동</td>
+                <td>전산전자공학부</td>
+                <td>1997-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>21700000</td>
+                <td>김길동</td>
+                <td>전산전자공학부</td>
+                <td>1998-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>21800000</td>
+                <td>지길동</td>
+                <td>전산전자공학부</td>
+                <td>1999-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>21900000</td>
+                <td>신길동</td>
+                <td>전산전자공학부</td>
+                <td>2000-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>22000000</td>
+                <td>조길동</td>
+                <td>전산전자공학부</td>
+                <td>2001-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>22100000</td>
+                <td>오길동</td>
+                <td>전산전자공학부</td>
+                <td>2002-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>22200000</td>
+                <td>서길동</td>
+                <td>전산전자공학부</td>
+                <td>2003-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>22300000</td>
+                <td>용길동</td>
+                <td>GLS</td>
+                <td>2004-01-01</td>
+                <td>남</td>
+                <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm delete-post" data-bs-toggle="modal"
+                            data-bs-target="#confirmDeleteModal">삭제
+                    </button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </ul>
+    <button class="btn btn-primary" onclick="redirectToAdd()">추가하기</button>
+
+
+    <!-- 삭제 확인 모달 -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">삭제 확인</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    정말로 삭제하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteConfirmed()">예</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        function redirectToAdd() {
+            // Redirect to add.html
+            window.location.href = 'add.html';
+        }
+
+        function redirectToEdit() {
+            // Redirect to add.html
+            window.location.href = 'edit.html';
+        }
+
+        function deleteConfirmed() {
+            // Show alert for deletion confirmation
+            alert('삭제되었습니다.');
+            $('#confirmDeleteModal').modal('hide');
+        }
+    </script>
+</body>
+</html>
