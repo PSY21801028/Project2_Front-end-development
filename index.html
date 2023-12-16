@@ -24,6 +24,7 @@
                 <th>생년월일</th>
                 <th>성별</th>
                 <th>전화번호</th>
+                <th>View</th>
                 <th>Edit</th>
                 <th>Delete</th> <!-- 삭제 버튼 열 추가 -->
             </tr>
@@ -36,6 +37,9 @@
                 <td>1995-01-01</td>
                 <td>남</td>
                 <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
                 <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
@@ -52,6 +56,9 @@
                 <td>1996-01-01</td>
                 <td>남</td>
                 <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
                 <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
@@ -70,6 +77,9 @@
                 <td>남</td>
                 <td>010-0000-0000</td>
                 <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
+                <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
                 <td>
@@ -87,6 +97,9 @@
                 <td>남</td>
                 <td>010-0000-0000</td>
                 <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
+                <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
                 <td>
@@ -102,6 +115,9 @@
                 <td>1999-01-01</td>
                 <td>남</td>
                 <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
                 <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
@@ -120,6 +136,9 @@
                 <td>남</td>
                 <td>010-0000-0000</td>
                 <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
+                <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
                 <td>
@@ -137,6 +156,9 @@
                 <td>남</td>
                 <td>010-0000-0000</td>
                 <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
+                <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
                 <td>
@@ -152,6 +174,9 @@
                 <td>2002-01-01</td>
                 <td>남</td>
                 <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
                 <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
@@ -170,6 +195,9 @@
                 <td>남</td>
                 <td>010-0000-0000</td>
                 <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
+                <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
                 <td>
@@ -186,6 +214,9 @@
                 <td>2004-01-01</td>
                 <td>남</td>
                 <td>010-0000-0000</td>
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="redirectToView()">보기</button>
+                </td>
                 <td>
                     <button class="btn btn-primary btn-sm" onclick="redirectToEdit()">수정</button>
                 </td>
@@ -233,6 +264,11 @@
         function redirectToEdit() {
             // Redirect to add.html
             window.location.href = 'edit.html';
+        }
+
+        function redirectToView() {
+            // Redirect to add.html
+            window.location.href = 'view.html';
         }
 
         function deleteConfirmed() {
